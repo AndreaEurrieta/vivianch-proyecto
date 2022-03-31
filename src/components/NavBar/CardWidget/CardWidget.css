@@ -1,0 +1,30 @@
+.icono-bag {
+    margin-left: 1vw;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    margin-right: 1vw;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .icono-bag:hover {
+    color: rgb(54, 54, 54);
+  }
+  
+  .cart-widget-amount {
+    font-size: 10px;
+    position: absolute;
+    margin-left: 1vw;
+    top: 2vh;
+    left: 2.8vw;
+    border-radius: 50%;
+    height: 17px;
+    width: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+  }
+  
