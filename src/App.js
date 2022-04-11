@@ -1,16 +1,16 @@
 import './App.css';
+import { ItemListContainer } from './components/Item/ItemListContainer';
 import { NavBar } from "./components/NavBar/NavBar";
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <>
       <header>
-        <NavBar/>
+        <NavBar />
       </header>
-      <ItemListContainer/>
+      <ItemListContainer />
     </>
-);
+  );
 }
 
 export default App;
