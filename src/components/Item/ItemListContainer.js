@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Loader } from "../loader/Loader";
+import { Loader } from "../Loader/Loader";
 import { products } from "../../Data/Data";
 import { ItemList } from "./ItemList";
 
