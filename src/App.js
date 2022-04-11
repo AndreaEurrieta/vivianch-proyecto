@@ -4,13 +4,14 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 
 function App() {
   return (
-    <div>
+    <>
       <header>
         <NavBar/>
       </header>
-      <ItemListContainer greeting="HOLAAAA TUTOR"/>
-    </div>
+      <ItemListContainer/>
+    </>
 );
 }
 
 export default App;
+
