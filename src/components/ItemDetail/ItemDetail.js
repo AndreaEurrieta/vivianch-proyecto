@@ -3,7 +3,7 @@ export const ItemDetail = ({imgUrl, title, price, description}) => {
     return (
         <div className="details">
             <div className="big-img">
-                <img src={imgUrl[0]} alt="" />
+                <img src={imgUrl} alt="" />
             </div>
             <div className="box">
                 <div className="row">
@@ -15,5 +15,4 @@ export const ItemDetail = ({imgUrl, title, price, description}) => {
             </div>
         </div>
     )
-
 }

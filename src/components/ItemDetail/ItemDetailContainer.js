@@ -4,11 +4,11 @@ import {useState, useEffect} from "react";
 import { products } from "../../Data/Data";
 
 
-const getItemsById = () =>
+const getItemsById = (id) =>
   new Promise((resolve, reject) => {
     try {
       setTimeout(() => {
-        resolve(products.find(prod=>prod.id));
+        resolve(products.find(prod=>prod.id===id));
         
       }, 2000);
     } catch (error) {
@@ -23,7 +23,7 @@ const getItemsById = () =>
     
     useEffect(() => {
       setLoad(true)
-      getItemsById()
+      getItemsById(3)
         .then((products) => {
   
           setItem(products)
@@ -35,7 +35,11 @@ const getItemsById = () =>
       <div>
         {load && <Loader/>}
         <ItemDetail
-          item={item}
+           id={item.id}
+           imgUrl={item.imgUrl}
+           title={item.title}
+           price={item.price}
+           description={item.description}
         />
       </div>
     );
