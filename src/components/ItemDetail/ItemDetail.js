@@ -1,5 +1,5 @@
 import "./ItemDetail.css";
-export const ItemDetail = ({imgUrl, title, price, description}) => {
+export const ItemDetail = ({ imgUrl, title, price, description }) => {
     return (
         <div className="details">
             <div className="big-img">
