@@ -1,3 +1,4 @@
+import "./ItemCount.css"
 import React, { useState, useEffect } from "react";
 
 export const ItemCount=({ stock, initial, onAdd })=>{
@@ -18,11 +19,11 @@ export const ItemCount=({ stock, initial, onAdd })=>{
     }, [count])
 
         return (
-        <div className="btn-group" role="group" aria-label="Basic outlined example">
-            <button onClick={handleAdd} type="button" className="btn btn-outline-primary">+</button>
-            <imput type="number" className="form-control">{count}</imput>
-            <button onClick={handleRemove} type="button" className="btn btn-outline-primary">-</button>
-            <button onClick={()=>onAdd(count)} type="button" className="btn btn-primary">Agregar al carrito</button>
+        <div className="">
+            <button onClick={handleAdd} type="button" className="cart">+</button>
+            <p>{count}</p>
+            <button onClick={handleRemove} type="button" className="cart">-</button>
+            <button onClick={()=>onAdd(count)} type="button" className="cart">Agregar al carrito</button>
         </div>
     )
 }

@@ -1,5 +1,15 @@
 import "./ItemDetail.css";
+import { ItemCount } from "../ItemCount/ItemCount"
+import { useState } from "react"
+import { Link } from "react-router-dom";
+
+
 export const ItemDetail = ({ imgUrl, title, price, description }) => {
+    const [amountItemCount, setAmountItemCount] = useState(null);
+    const onAdd = (count) => {
+        setAmountItemCount(count)
+    };
+
     return (
         <div className="details">
             <div className="big-img">
@@ -11,7 +21,16 @@ export const ItemDetail = ({ imgUrl, title, price, description }) => {
                     <span>$ {price}</span>
                 </div>
                 <p>{description}</p>
-                <button className="cart">Add to cart</button>
+                {
+                    !amountItemCount && <ItemCount
+                        initial={1}
+                        stock={10}
+                        onAdd={onAdd}
+                    />
+                }
+                {
+                    amountItemCount >= 1 && <Link className="cart" to="/Cart">Add to cart</Link>
+                }
             </div>
         </div>
     )
