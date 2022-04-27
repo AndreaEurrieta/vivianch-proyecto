@@ -28,11 +28,7 @@ export const ItemDetailContainer = () => {
     <div>
       {load && <Loader />}
       <ItemDetail
-        id={item.id}
-        imgUrl={item.imgUrl}
-        title={item.title}
-        price={item.price}
-        description={item.description}
+        item={item}
       />
     </div>
   );

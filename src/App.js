@@ -1,10 +1,14 @@
+import { ContextProvider } from "./Context/ContextProvider";
 import { Router } from "./router/Router";
 
 
 function App() {
   return (
     <>
-     <Router/>
+    <ContextProvider>
+      <Router/>
+    </ContextProvider>
+     
     </>
   );
 }

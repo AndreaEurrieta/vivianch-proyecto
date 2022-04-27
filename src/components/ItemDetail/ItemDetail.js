@@ -1,10 +1,19 @@
 import "./ItemDetail.css";
 import { ItemCount } from "../ItemCount/ItemCount"
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { Link } from "react-router-dom";
+import { context } from "../../Context/ContextProvider"
 
+export const ItemDetail = ({ item }) => {
+    const {imgUrl, title, price, description, id } = item;
 
-export const ItemDetail = ({ imgUrl, title, price, description }) => {
+    const {cart, handleAddItem} = useContext (context)
+
+    const handleClg =()=>{
+        console.log(cart)
+        handleAddItem(item, id, amountItemCount)
+    }
+
     const [amountItemCount, setAmountItemCount] = useState(null);
     const onAdd = (count) => {
         setAmountItemCount(count)
@@ -29,7 +38,7 @@ export const ItemDetail = ({ imgUrl, title, price, description }) => {
                     />
                 }
                 {
-                    amountItemCount >= 1 && <Link className="cart" to="/Cart">Add to cart</Link>
+                    amountItemCount >= 1 && <Link onClick={handleClg} className="cart" to="/Cart">Ir al carrito</Link>
                 }
             </div>
         </div>
