@@ -38,7 +38,7 @@ export const ItemDetail = ({ item }) => {
                     />
                 }
                 {
-                    amountItemCount >= 1 && <Link onClick={handleClg} className="cart" to="/Cart">Ir al carrito</Link>
+                    amountItemCount >= 1 && <Link onClick={handleClg} className="cart" to="/cart">Terminar compra</Link>
                 }
             </div>
         </div>

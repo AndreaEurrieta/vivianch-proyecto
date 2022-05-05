@@ -14,7 +14,7 @@ export const Router = ()=>{
       <Route path='/category/:categoryId' element= {<ItemListContainer/>} />
       <Route path='/item/:productId' element={<ItemDetailContainer/>} />
       <Route path='*' element={<h1>NOT FOUND 404</h1>} />
-      <Route path='/Cart' element={<Cart />} />
+      <Route path='/cart' element={<Cart />} />
     </Routes>
   </BrowserRouter>
   </>
