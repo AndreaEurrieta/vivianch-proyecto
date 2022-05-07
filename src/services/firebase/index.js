@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCv5sntFq1TypCM6Qy_gnR_mbtgYyU-GEc",
   authDomain: "vivianch-proyecto.firebaseapp.com",
   projectId: "vivianch-proyecto",
@@ -13,4 +13,4 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const firestoreDb = getFirestore(app)
+export const firestoreDb = getFirestore(app)
