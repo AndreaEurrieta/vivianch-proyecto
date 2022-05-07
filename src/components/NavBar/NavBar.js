@@ -4,15 +4,21 @@ import { GetCategories } from '../ItemDetail/GetCategories';
 import './CartWidget/CartWidget';
 import { CartWidget } from './CartWidget/CartWidget';
 import { context } from '../../Context/ContextProvider';
+import { firestoreDb } from '../../services/firebase';
+import { getDocs,collection } from 'firebase/firestore';
 
 export const NavBar = () => {
   const {cart} = useContext(context)
   const [categories, setCategories] = useState([])
 
-  useEffect(() => {
-    GetCategories().then(categories => {
-      setCategories(categories)
-    })
+    useEffect(() => {
+      getDocs(collection(firestoreDb, 'categories')).then(response=>{
+        const categories = response.docs.map(doc=>{
+          return { id: doc.id, ...doc.data()}
+        })
+        setCategories(categories)
+        console.log(categories)
+      })
   }, [])
 
   return (
@@ -25,8 +31,8 @@ export const NavBar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link to='/' className="nav-link active" aria-current="page">Home</Link>
-            {categories.map(cat =>
-              <NavLink key={cat.id} to={`/category/${cat.id}`} className="nav-link">{cat.description}</NavLink>
+            {categories.map(item =>
+              <NavLink key={item.id} to={`/category/${item.id}`} className="nav-link">{item.description}</NavLink>
             )}
           </div>
         </div>
