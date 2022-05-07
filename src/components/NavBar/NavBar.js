@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
-import { GetCategories } from '../ItemDetail/GetCategories';
 import './CartWidget/CartWidget';
 import { CartWidget } from './CartWidget/CartWidget';
 import { context } from '../../Context/ContextProvider';
