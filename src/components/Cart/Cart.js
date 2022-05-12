@@ -1,12 +1,16 @@
 import { useContext } from "react"
 import { context } from "../../Context/ContextProvider"
+import { handleBuy } from "../../services/services"
 import { CartEmpty } from "./CartEmpty"
 import { CartItem } from "./CartItem"
 
 export const Cart = () => {
 
-  const { cart, handeleDeleteItem } = useContext(context)
+  const { cart, handeleDeleteItem, user, totalPrice } = useContext(context)
 
+  const finishBuy = () =>{
+    handleBuy(cart, totalPrice)
+  }
 
   return (
     <div>
@@ -26,6 +30,8 @@ export const Cart = () => {
             />
           ))
       }
+          <h6>{totalPrice}</h6>
+            <button className="btn btn-primary" onClick={finishBuy}>comprar</button>
     </div>
   )
 }
