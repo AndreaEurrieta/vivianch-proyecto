@@ -1,12 +1,13 @@
 import { useContext } from "react"
 import { context } from "../../Context/ContextProvider"
 import { handleBuy } from "../../services/services"
+import { ModalDataUser } from "../Modal/ModalDataUser"
 import { CartEmpty } from "./CartEmpty"
 import { CartItem } from "./CartItem"
 
 export const Cart = () => {
 
-  const { cart, handeleDeleteItem, user, totalPrice } = useContext(context)
+  const { cart, handeleDeleteItem, totalPrice } = useContext(context)
 
   const finishBuy = () =>{
     handleBuy(cart, totalPrice)
@@ -32,6 +33,7 @@ export const Cart = () => {
       }
           <h6>{totalPrice}</h6>
             <button className="btn btn-primary" onClick={finishBuy}>comprar</button>
+            <ModalDataUser />
     </div>
   )
 }
