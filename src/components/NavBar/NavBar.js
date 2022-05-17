@@ -5,6 +5,7 @@ import { CartWidget } from './CartWidget/CartWidget';
 import { context } from '../../Context/ContextProvider';
 import { firestoreDb } from '../../services/firebase';
 import { getDocs,collection } from 'firebase/firestore';
+import './NavBar.css';
 
 export const NavBar = () => {
   const {cart} = useContext(context)
@@ -21,7 +22,7 @@ export const NavBar = () => {
   }, [])
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark nav">
       <div className="container-fluid">
         {
           (cart.length !== 0) && <CartWidget />

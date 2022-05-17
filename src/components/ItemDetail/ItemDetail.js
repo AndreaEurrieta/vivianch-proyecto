@@ -37,9 +37,12 @@ export const ItemDetail = ({ item }) => {
                         onAdd={onAdd}
                     />
                 }
+                <div>
                 {
-                    amountItemCount >= 1 && <Link onClick={handleClg} className="cart" to="/cart">Terminar compra</Link>
+                    amountItemCount >= 1 && 
+                    <Link onClick={handleClg} className="btn btn-finish" to="/cart">Terminar compra</Link>
                 }
+                </div>
             </div>
         </div>
     )

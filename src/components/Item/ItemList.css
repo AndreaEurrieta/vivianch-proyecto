@@ -1,32 +1,21 @@
-.containerBtn{
-    display: flex;
-    height: 2rem;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
+.container{
+    width: 100%;
 }
 
-.circleBtn {
-    font-size: 1rem;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background: hsl(338, 33%, 16%);
-    color: white;
-    outline: none;
-    cursor: pointer;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-color: hsl(338, 33%, 16%);
-    border-radius: 50%;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
+.listContainer{
+    padding: 8rem;
+    background-color: hsl(338, 33%, 16%);
 }
-.count{
-    padding: 0rem 1rem;
+
+.col{
+    padding-bottom: 2rem;
 }
- 
-.cart {
+.card-title{
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.btn{
     align-items: center;
     color:  hsl(338, 33%, 16%);
     position: relative;
@@ -48,17 +37,17 @@
     transition: all 0.4s ease;
   }
 
-.btnCart {
+.detailsBtn {
   margin: auto auto;
   padding: 0.70rem 0rem;
   font-size: 14px;
   border-radius: 0rem;
   border-bottom: 3px solid  hsl(338, 33%, 16%);
   align-items: center;
-  width: 28.125rem;
+  width: 17rem;
   height: 2.5rem;
 }
-.btnCart:hover {
+.detailsBtn:hover {
   background-size: 200% 200%;
   background-image: linear-gradient(to top,  hsl(338, 33%, 16%) 100%, transparent 100%);
   color: white;

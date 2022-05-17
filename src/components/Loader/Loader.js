@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Loader.css';
 
 export const Loader = () => {
   return (
-    <div className="text-center">
+    <div className="text-center containerLoader">
       <div className="spinner-border" role="status">
-        <span className="visually-hidden">Loading...</span>
+        <span className="loader"></span>
       </div>
     </div>
   )

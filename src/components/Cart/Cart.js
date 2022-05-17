@@ -21,6 +21,7 @@ export const Cart = () => {
           : cart.map((item, i) => (
             <CartItem
               key={i}
+              imgUrl={item.imgUrl}
               cant={item.cant}
               category={item.category}
               description={item.description}

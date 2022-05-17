@@ -1,0 +1,15 @@
+.nav{
+    background-color: hsl(338, 33%, 16%);
+    height: 5rem;
+}
+
+.navbar-brand {
+    font-size: 1.60rem;
+    padding-left: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.nav-link{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
