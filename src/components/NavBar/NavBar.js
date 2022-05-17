@@ -4,21 +4,21 @@ import './CartWidget/CartWidget';
 import { CartWidget } from './CartWidget/CartWidget';
 import { context } from '../../Context/ContextProvider';
 import { firestoreDb } from '../../services/firebase';
-import { getDocs,collection } from 'firebase/firestore';
+import { getDocs, collection } from 'firebase/firestore';
 import './NavBar.css';
 
 export const NavBar = () => {
-  const {cart} = useContext(context)
+  const { cart } = useContext(context)
   const [categories, setCategories] = useState([])
 
-    useEffect(() => {
-      getDocs(collection(firestoreDb, 'categories')).then(response=>{
-        const categories = response.docs.map(doc=>{
-          return { id: doc.id, ...doc.data()}
-        })
-        setCategories(categories)
-        console.log(categories)
+  useEffect(() => {
+    getDocs(collection(firestoreDb, 'categories')).then(response => {
+      const categories = response.docs.map(doc => {
+        return { id: doc.id, ...doc.data() }
       })
+      setCategories(categories)
+      console.log(categories)
+    })
   }, [])
 
   return (

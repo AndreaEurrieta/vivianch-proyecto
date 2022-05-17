@@ -5,10 +5,10 @@ import { Router } from "./router/Router";
 function App() {
   return (
     <>
-    <ContextProvider>
-      <Router/>
-    </ContextProvider>
-     
+      <ContextProvider>
+        <Router />
+      </ContextProvider>
+
     </>
   );
 }

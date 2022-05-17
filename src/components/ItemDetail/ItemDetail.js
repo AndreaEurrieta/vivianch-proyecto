@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { context } from "../../Context/ContextProvider"
 
 export const ItemDetail = ({ item }) => {
-    const {imgUrl, title, price, description, id } = item;
+    const { imgUrl, title, price, description, id } = item;
 
-    const {cart, handleAddItem} = useContext (context)
+    const { cart, handleAddItem } = useContext(context)
 
-    const handleClg =()=>{
+    const handleClg = () => {
         handleAddItem(item, id, amountItemCount)
     }
 
@@ -37,7 +37,7 @@ export const ItemDetail = ({ item }) => {
                     />
                 }
                 {
-                    amountItemCount >= 1 && 
+                    amountItemCount >= 1 &&
                     <Link onClick={handleClg} className="button buttonFinish" to="/cart">Terminar compra</Link>
                 }
             </div>

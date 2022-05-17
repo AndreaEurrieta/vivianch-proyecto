@@ -4,12 +4,14 @@
   flex-wrap: wrap;
   padding: 6rem 0;
 }
+
 .details .big-img {
   max-width: 475px;
   min-width: 290px;
   overflow: hidden;
   margin: 2rem;
 }
+
 .big-img img {
   width: 100%;
   height: 100%;
@@ -17,34 +19,40 @@
   display: block;
   object-fit: cover;
 }
+
 .details .box {
   max-width: 450px;
   min-width: 290px;
   margin: 2rem;
 }
+
 .box .row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
 .box .row h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
 .box .row span {
   color: black;
 }
+
 .box p {
   line-height: 1.5;
   margin: 1rem 0;
   text-align: justify;
   color: hsl(0, 0%, 31%);
 }
+
 .box .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:  hsl(338, 33%, 16%);
+  color: hsl(338, 33%, 16%);
   position: relative;
   text-decoration: none;
   font-weight: 400;
@@ -65,19 +73,20 @@
 }
 
 .box .buttonFinish {
-margin: auto auto;
-padding: 0.70rem 0rem;
-font-size: 14px;
-border-radius: 0rem;
-border-bottom: 3px solid  hsl(338, 33%, 16%);
-align-items: center;
-width: 100%;
-height: 2.5rem;
+  margin: auto auto;
+  padding: 0.70rem 0rem;
+  font-size: 14px;
+  border-radius: 0rem;
+  border-bottom: 3px solid hsl(338, 33%, 16%);
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
 }
+
 .box .buttonFinish:hover {
-background-size: 200% 200%;
-background-image: linear-gradient(to top,  hsl(338, 33%, 16%) 100%, transparent 100%);
-color: white;
-border-bottom: 3px solid  hsl(338, 33%, 16%);
-transition: all 0.09s ease-in;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to top, hsl(338, 33%, 16%) 100%, transparent 100%);
+  color: white;
+  border-bottom: 3px solid hsl(338, 33%, 16%);
+  transition: all 0.09s ease-in;
 }

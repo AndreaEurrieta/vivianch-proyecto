@@ -1,22 +1,6 @@
-.container {
-  width: 100%;
-}
-
-.listContainer {
-  padding: 8rem;
-  background-color: hsl(338, 33%, 16%);
-}
-
-.col {
-  padding-bottom: 2rem;
-}
-
-.card-title {
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-
-.btn {
+.btnComprar {
+  display: flex;
+  justify-content: center;
   align-items: center;
   color: hsl(338, 33%, 16%);
   position: relative;
@@ -38,18 +22,18 @@
   transition: all 0.4s ease;
 }
 
-.detailsBtn {
+.comprarBtn {
   margin: auto auto;
-  padding: 0.70rem 0rem;
+  padding: 0rem 0rem;
   font-size: 14px;
   border-radius: 0rem;
   border-bottom: 3px solid hsl(338, 33%, 16%);
   align-items: center;
-  width: 17rem;
+  width: 70%;
   height: 2.5rem;
 }
 
-.detailsBtn:hover {
+.comprarBtn:hover {
   background-size: 200% 200%;
   background-image: linear-gradient(to top, hsl(338, 33%, 16%) 100%, transparent 100%);
   color: white;

@@ -23,6 +23,6 @@ export const handleBuy = async (
         const order = await addDoc(storeCollection, orderDetails)
         saleAlert(order._key.path.segments[1]);
     } catch (error) {
-       errorAlert(error);
+        errorAlert(error);
     }
 };

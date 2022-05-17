@@ -18,14 +18,14 @@ export const ItemListContainer = () => {
       ? query(collection(firestoreDb, 'products'), where('category', '==', categoryId))
       : collection(firestoreDb, 'products')
 
-    getDocs(collectionRef).then(response=>{
-      const products = response.docs.map(doc =>{
-        return {id:doc.id, ...doc.data()}
+    getDocs(collectionRef).then(response => {
+      const products = response.docs.map(doc => {
+        return { id: doc.id, ...doc.data() }
       })
       setItems(products)
       setLoad(false)
     })
-  
+
   }, [categoryId]);
 
   return (

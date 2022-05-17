@@ -11,7 +11,7 @@ export const FormConfimDataUser = () => {
   const { cart, totalPrice } = useContext(context)
 
   const confirmDataUser = (values) => {
-   handleBuy(values, cart, totalPrice)
+    handleBuy(values, cart, totalPrice)
   };
 
   const formik = useFormik({
@@ -30,7 +30,7 @@ export const FormConfimDataUser = () => {
     }),
 
     onSubmit: (values) => {
-        confirmDataUser(values);
+      confirmDataUser(values);
       formik.resetForm();
     },
   });

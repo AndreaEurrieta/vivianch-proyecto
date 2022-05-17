@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FormConfimDataUser } from "../Cart/FormConfimDataUser";
+import "./ModalDataUser.css";
 
 function MyVerticallyCenteredModal(props) {
 
@@ -32,8 +33,8 @@ export const ModalDataUser = () => {
   return (
     <>
       <Button
-        variant="success"
-        className='m-1'
+        variant="light"
+        className='btnComprar comprarBtn'
         onClick={() => setModalShow(true)}
       >
         Comprar

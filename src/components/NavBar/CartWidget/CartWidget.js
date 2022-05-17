@@ -4,7 +4,7 @@ import { context } from "../../../Context/ContextProvider";
 import "./CartWidget.css";
 export const CartWidget = () => {
 
-const {totalUn} = useContext(context) 
+  const { totalUn } = useContext(context)
 
   return (
     <div>

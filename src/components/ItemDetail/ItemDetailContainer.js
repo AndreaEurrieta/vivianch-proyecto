@@ -16,8 +16,8 @@ export const ItemDetailContainer = () => {
   const { productId } = useParams()
 
   useEffect(() => {
-    getDoc(doc(firestoreDb, 'products', productId)).then(response=>{
-      const item = { id:response.id, ...response.data()}
+    getDoc(doc(firestoreDb, 'products', productId)).then(response => {
+      const item = { id: response.id, ...response.data() }
       setItem(item)
       setLoad(false)
     })
