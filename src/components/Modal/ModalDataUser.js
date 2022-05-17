@@ -36,7 +36,7 @@ export const ModalDataUser = () => {
         className='m-1'
         onClick={() => setModalShow(true)}
       >
-        Terminar compra
+        Comprar
       </Button>
       <MyVerticallyCenteredModal
         show={modalShow}

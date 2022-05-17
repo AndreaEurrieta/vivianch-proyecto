@@ -1,34 +1,25 @@
-export const CartItem = ({ imgUrl, cant, category, price, title, id, handeleDeleteItem }) => {
+import "./CartItem.css";
+
+export const CartItem = ({ imgUrl, cant, price, title, id, handeleDeleteItem }) => {
 
     return (
-      <div className="card mb-3" style="max-width: 540px;">
-  <div className="row g-0">
-    <div className="col-md-4">
-      <img src={imgUrl} className="img-fluid rounded-start" alt="img"/>
-    </div>
-    <div className="col-md-8">
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p class="card-text"><spam>{price}</spam></p>
-        <p class="card-text"><spam>{cant}</spam></p>
-        <p className="card-text"><small className="text-muted">{category}</small></p>
+      <div className="cart">
+      <div className="containerCart">
+        <div className="div1">
+          <img className="img-cart" src={imgUrl}/>
+        </div>
+        <div className="div2">
+          <h2 className="name-cart">{title}</h2>
+          <p><span className="price-cart">${price}</span></p>
+          <p><span className="cant-cart">cantidad = {cant}</span></p>
+          
+          
+          
+        </div>
+        <div className="div3">
+        <button className='btn-delete' onClick={() => { handeleDeleteItem(id) }}><i class="far fa-trash-alt"></i></button>
+        </div>
       </div>
-      <div>
-      <button className="btn btn-danger" onClick={() => { handeleDeleteItem(id) }}>Delete</button>
       </div>
-    </div>
-  </div>
-</div>
-      // <div className='border'>
-      //   <img src={imgUrl}/>
-      //   <p>cant:{cant}</p>
-      //   <p>category:{category}</p>
-      //   <p>price:{price}</p>
-      //   <p>title:{title}</p>
-    //   //   <button
-    //       className='btn btn-danger'
-    //  onClick={() => { handeleDeleteItem(id) }}
-    //   >Delete</button>
-      // </div>
     )
   }

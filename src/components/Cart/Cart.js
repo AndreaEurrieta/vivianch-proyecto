@@ -12,9 +12,10 @@ export const Cart = () => {
   const finishBuy = () =>{
     handleBuy(cart, totalPrice)
   }
-
   return (
-    <div>
+    <div  className="cart">
+      <div>
+      <h2 className="title">mi cesta</h2>
       {
         (cart.length === 0)
           ? <CartEmpty />
@@ -32,9 +33,12 @@ export const Cart = () => {
             />
           ))
       }
-          <h6>{totalPrice}</h6>
-            <button className="btn btn-primary" onClick={finishBuy}>comprar</button>
-            <ModalDataUser />
-    </div>
+      </div>
+      <div>
+        <h6>{totalPrice}</h6>
+        <button className="btn btn-primary" onClick={finishBuy}>comprar</button>
+        <ModalDataUser />
+      </div>
+      </div>
   )
 }

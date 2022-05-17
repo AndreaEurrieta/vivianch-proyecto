@@ -40,7 +40,9 @@
   text-align: justify;
   color: hsl(0, 0%, 31%);
 }
-.btn {
+.box .button {
+  display: flex;
+  justify-content: center;
   align-items: center;
   color:  hsl(338, 33%, 16%);
   position: relative;
@@ -62,17 +64,17 @@
   transition: all 0.4s ease;
 }
 
-.btn-finish {
+.box .buttonFinish {
 margin: auto auto;
 padding: 0.70rem 0rem;
 font-size: 14px;
 border-radius: 0rem;
 border-bottom: 3px solid  hsl(338, 33%, 16%);
 align-items: center;
-width: 28.125rem;
+width: 100%;
 height: 2.5rem;
 }
-.btn-finish:hover {
+.box .buttonFinish:hover {
 background-size: 200% 200%;
 background-image: linear-gradient(to top,  hsl(338, 33%, 16%) 100%, transparent 100%);
 color: white;

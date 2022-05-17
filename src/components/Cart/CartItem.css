@@ -1,0 +1,78 @@
+.cart{
+width: 100%;
+display: grid;
+grid-template-columns: 60% 40%;
+
+}
+.containerCart{
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 50% 35% 15%;
+    overflow-x: hidden;
+    padding: 3rem 5rem 0rem 5rem;
+    width: 40rem;
+
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0rem 0rem 5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 0.2rem;
+    border-bottom: 1px solid hsl(338, 33%, 16%);
+    width: 28rem;
+
+}
+
+.div1 {
+    margin-top: 2vh;
+  }
+
+.div1  .img-cart {
+    height: 10rem;
+    width: auto;
+  }
+
+.div2 {
+    margin-top: 2vh;
+}
+.div2 .name-cart {
+    display: flex;
+    flex-direction: row;
+    text-align:start;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000000;
+  }   
+
+.div2 .price-cart {
+      display: flex;
+      font-weight: 700;
+      font-family: "Rubik", sans-serif;
+      font-size: 14px;
+      color: #000000;
+    }
+.div2 .cant-cart {
+    display: flex;
+    flex-direction: row;
+    font-family: "Rubik", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+    text-transform: capitalize;
+  }
+.div3 {
+    margin-top: 2vh;
+}
+.div3 .btn-delete {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    width: auto;
+    height: 5vh;
+  }

@@ -10,7 +10,6 @@ export const ItemDetail = ({ item }) => {
     const {cart, handleAddItem} = useContext (context)
 
     const handleClg =()=>{
-        console.log(cart)
         handleAddItem(item, id, amountItemCount)
     }
 
@@ -37,12 +36,10 @@ export const ItemDetail = ({ item }) => {
                         onAdd={onAdd}
                     />
                 }
-                <div>
                 {
                     amountItemCount >= 1 && 
-                    <Link onClick={handleClg} className="btn btn-finish" to="/cart">Terminar compra</Link>
+                    <Link onClick={handleClg} className="button buttonFinish" to="/cart">Terminar compra</Link>
                 }
-                </div>
             </div>
         </div>
     )

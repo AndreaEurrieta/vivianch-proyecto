@@ -25,7 +25,7 @@ export const ItemCount=({ stock, initial, onAdd })=>{
             <p><spam className="count">{count}</spam></p>
             <button onClick={handleRemove} type="button" className="circleBtn">-</button>
         </div>
-            <button onClick={()=>onAdd(count)} type="button" className="cart btnCart">Añadir a tu cesta</button>
+            <button onClick={()=>onAdd(count)} type="button" className="addCart btnCart">Añadir a tu cesta</button>
         </div>
     )
 }
